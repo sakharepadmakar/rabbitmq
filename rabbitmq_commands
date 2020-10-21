@@ -1,0 +1,12 @@
+#Listing all vhosts
+sudo rabbitmqctl list_vhosts -q | xargs -n1 | sort -u
+
+#List all queues in perticular vhost ex: queue1/queue2/queue3
+sudo rabbitmqctl list_queues -q -p <vhost>
+
+#Purge queue
+sudo rabbitmqctl purge_queue -p <vhost>  <queue1>
+
+OR
+#Purge queue Not Tested
+rabbitmqadmin purge queue name=name_of_the_queue_to_be_purged
